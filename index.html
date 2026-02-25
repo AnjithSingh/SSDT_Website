@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Sai Datta Tutorials</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Sri Sai Datta Tutorials</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#admission" class="btn">Admission</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>
+      Trusted Tuition Centre for <br>
+      <span>8th–10th & Intermediate Students</span>
+    </h1>
+
+    <p>10+ Years of Excellence • Personal Attention • Proven Results</p>
+
+    <div class="hero-actions">
+      <a href="#admission" class="btn big">Apply for Admission</a>
+      <a href="https://wa.me/916303423475" class="btn outline">WhatsApp Us</a>
+    </div>
+
+    <div class="trust-badges">
+      <div>✔ 10+ Years Experience</div>
+      <div>✔ Special 10th & Inter Batches</div>
+      <div>✔ Limited Batch Size</div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2>About Sri Sai Datta Tutorials</h2>
+  <p>
+    Sri Sai Datta Tutorials has been guiding students for over
+    <strong>10 years</strong> with a strong focus on fundamentals,
+    discipline, and personal attention.
+  </p>
+
+  <div class="stats">
+    <div><h3>10+</h3><span>Years Experience</span></div>
+    <div><h3>Special</h3><span>10th & Inter</span></div>
+    <div><h3>100%</h3><span>Personal Care</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Why Parents Trust Us</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Experienced Faculty</h3>
+      <p>Strong teaching experience with proven academic success.</p>
+    </div>
+    <div class="card">
+      <h3>Personal Attention</h3>
+      <p>Limited students per batch ensures individual focus.</p>
+    </div>
+    <div class="card">
+      <h3>Strong Foundation</h3>
+      <p>Concept-based learning for Maths, Science & Languages.</p>
+    </div>
+  </div>
+</section>
+
+<section id="courses" class="section dark">
+  <h2>Courses Offered</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Classes</h3>
+      <p>8th – 10th • Intermediate • Gurukul</p>
+    </div>
+    <div class="card">
+      <h3>Subjects</h3>
+      <p>Maths, Science, Physics, Chemistry, Biology, Telugu, Hindi, English</p>
+    </div>
+    <div class="card">
+      <h3>Special Batches</h3>
+      <p>Special 10th Class<br>Special Intermediate Batch</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <h2>Classroom & Activities</h2>
+  <div class="gallery">
+    <img src="images/img1.jpg">
+    <img src="images/img2.jpg">
+    <img src="images/img3.jpg">
+    <img src="images/img4.jpg">
+    <img src="images/img5.jpg">
+    <img src="images/img6.jpg">
+  </div>
+</section>
+
+<section id="admission" class="section dark">
+  <h2>Admission Enquiry</h2>
+  <p>Fill the form and we will contact you</p>
+
+  <form class="admission-form" onsubmit="sendWhatsApp(event)">
+    <input type="text" id="student" placeholder="Student Name" required>
+    <input type="text" id="class" placeholder="Class (10th / Inter)" required>
+    <input type="text" id="parent" placeholder="Parent Name" required>
+    <input type="tel" id="phone" placeholder="Mobile Number" required>
+    <input type="text" id="school" placeholder="School / College Name">
+    <textarea id="message" placeholder="Message (optional)"></textarea>
+    <button type="submit" class="btn big">Submit Enquiry</button>
+  </form>
+</section>
+
+<section class="section contact">
+  <h2>Contact Us</h2>
+  <p><strong>Location:</strong> Sriram Nagar, Kattedhan, Old Kurnool Road, Budwel</p>
+  <p><strong>Phone:</strong> 6303423475</p>
+  <a href="https://wa.me/916303423475" class="btn big">Call / WhatsApp</a>
+</section>
+
+<footer>
+  <p>© 2026 Sri Sai Datta Tutorials. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
