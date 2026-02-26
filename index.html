@@ -4,89 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sri Sai Datta Tutorials</title>
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- THREE.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="header">
   <div class="logo-box">
-    <img src="images/logo.png" alt="Sri Sai Datta Tutorials">
-    <div class="logo-text">
-      <strong>Sri Sai Datta Tutorials</strong>
+    <img src="images/logo.png">
+    <div>
+      <h3>Sri Sai Datta Tutorials</h3>
       <span>Where your child's success story begins</span>
     </div>
   </div>
-  <a href="#admission" class="cta">Admission</a>
+  <a href="#admission" class="btn-gold">Admission</a>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-overlay"></div>
+  <canvas id="bg"></canvas>
+  <canvas id="particles"></canvas>
+
   <div class="hero-content">
-    <h1>
-      Trusted Tuition for <br>
-      <span>8th–10th & Intermediate</span>
+    <h1 class="reveal">
+      Shaping Young Minds <br>
+      <span>For a Brighter Future</span>
     </h1>
-    <p>
-      10+ Years of Experience • Special Batches • Personal Attention
+
+    <p class="reveal delay">
+      10+ Years Excellence • Special 10th & Inter Batches • Personal Mentorship
     </p>
-    <a href="#admission" class="primary-btn">Apply for Admission</a>
+
+    <a href="#admission" class="btn-gold big reveal delay2">
+      Apply for Admission
+    </a>
   </div>
 </section>
 
 <!-- TRUST -->
-<section class="trust">
-  <div class="trust-box">10+ Years Experience</div>
-  <div class="trust-box">Special 10th & Inter Batches</div>
-  <div class="trust-box">Limited Students Per Batch</div>
+<section class="trust reveal">
+  <div class="trust-card">10+ Years Experience</div>
+  <div class="trust-card">Result-Oriented Teaching</div>
+  <div class="trust-card">Limited Batch Strength</div>
 </section>
 
 <!-- ABOUT -->
-<section class="section">
-  <h2>About Sri Sai Datta Tutorials</h2>
+<section class="section reveal">
+  <h2>Why Sri Sai Datta Tutorials?</h2>
   <p>
-    We are a trusted tuition centre in Sriram Nagar, Kattedhan,
-    focused on strong fundamentals, discipline, and result-oriented teaching.
+    A trusted tuition centre in Sriram Nagar, Kattedhan, focused on
+    strong fundamentals, discipline, and individual attention.
   </p>
 </section>
 
 <!-- COURSES -->
-<section class="section light">
+<section class="section dark reveal">
   <h2>Courses Offered</h2>
-  <div class="list">
-    <div>📘 Classes: 8th – 10th, Intermediate, Gurukul</div>
-    <div>📘 Maths, Science, Physics, Chemistry, Biology</div>
-    <div>📘 Telugu, Hindi, English</div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="section">
-  <h2>Classroom Glimpses</h2>
-  <div class="gallery">
-    <img src="images/g1.jpg">
-    <img src="images/g2.jpg">
-    <img src="images/g3.jpg">
+  <div class="grid">
+    <div class="glass">8th – 10th Classes</div>
+    <div class="glass">Intermediate & Gurukul</div>
+    <div class="glass">Maths • Science • Physics</div>
+    <div class="glass">Chemistry • Biology</div>
+    <div class="glass">Telugu • Hindi • English</div>
   </div>
 </section>
 
 <!-- ADMISSION -->
-<section id="admission" class="section dark">
+<section id="admission" class="section reveal">
   <h2>Admission Enquiry</h2>
-  <p>Fill the form below and we will contact you</p>
-
   <form class="form" onsubmit="sendWhatsApp(event)">
     <input id="student" placeholder="Student Name" required>
     <input id="class" placeholder="Class (10th / Inter)" required>
     <input id="parent" placeholder="Parent Name" required>
     <input id="phone" placeholder="Mobile Number" required>
-    <button type="submit">Submit Enquiry</button>
+    <button class="btn-gold">Submit Enquiry</button>
   </form>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>📍 Sriram Nagar, Kattedhan, Old Kurnool Road, Budwel</p>
   <p>📞 6303423475</p>
