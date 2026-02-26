@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #ffffff;
+  background: #fff;
   color: #111;
 }
 
@@ -15,18 +15,34 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #fff;
-  padding: 14px 18px;
+  background: #ffffff;
+  padding: 10px 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   z-index: 100;
 }
 
-.brand {
-  font-weight: 700;
-  font-size: 15px;
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box img {
+  width: 45px;
+  height: 45px;
+}
+
+.logo-text strong {
+  font-size: 14px;
+  display: block;
+}
+
+.logo-text span {
+  font-size: 11px;
+  color: #666;
 }
 
 .cta {
@@ -46,6 +62,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0 18px;
+  padding-top: 90px;
 }
 
 .hero-overlay {
@@ -71,7 +88,6 @@ body {
 .hero p {
   margin: 14px 0 22px;
   font-size: 14px;
-  opacity: 0.95;
 }
 
 .primary-btn {
@@ -87,19 +103,19 @@ body {
 .trust {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  text-align: center;
   padding: 18px;
   gap: 10px;
+  text-align: center;
 }
 
 .trust-box {
-  background: #f5f7fa;
+  background: #f4f6fa;
   padding: 12px;
   font-size: 12px;
   border-radius: 12px;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
   padding: 55px 18px;
   text-align: center;
@@ -175,13 +191,10 @@ footer {
   color: #aaa;
 }
 
-/* DESKTOP ENHANCEMENT */
+/* DESKTOP */
 @media (min-width: 768px) {
   .hero h1 {
     font-size: 44px;
-  }
-  .hero p {
-    font-size: 16px;
   }
   .section {
     padding: 80px 20%;
