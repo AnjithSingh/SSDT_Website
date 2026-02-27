@@ -4,91 +4,207 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sri Sai Datta Tutorials</title>
-
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- THREE.JS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="header">
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- Noise overlay -->
+<div class="noise"></div>
+
+<header class="header" id="header">
   <div class="logo-box">
-    <img src="images/logo.png">
-    <div>
-      <h3>Sri Sai Datta Tutorials</h3>
-      <span>Where your child's success story begins</span>
+    <div class="logo-icon">
+      <svg viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="18" stroke="url(#lg)" stroke-width="1.5"/>
+        <path d="M12 20 L20 12 L28 20 L20 28 Z" stroke="url(#lg)" stroke-width="1.5" fill="none"/>
+        <circle cx="20" cy="20" r="4" fill="url(#lg)"/>
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="40" y2="40">
+            <stop offset="0%" stop-color="#f5c542"/>
+            <stop offset="100%" stop-color="#e6890a"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <h3>Sri Sai Datta</h3>
+      <span>Tutorials</span>
     </div>
   </div>
-  <a href="#admission" class="btn-gold">Admission</a>
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#admission" class="btn-gold">Enrol Now</a>
+  </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <canvas id="bg"></canvas>
-  <canvas id="particles"></canvas>
+  <div class="hero-grid-lines"></div>
 
   <div class="hero-content">
+    <div class="hero-badge reveal">
+      <span class="badge-dot"></span>
+      Admissions Open 2025–26
+    </div>
     <h1 class="reveal">
-      Shaping Young Minds <br>
-      <span>For a Brighter Future</span>
+      <em>Shaping</em><br>
+      Young Minds<br>
+      <span>For Tomorrow</span>
     </h1>
-
     <p class="reveal delay">
-      10+ Years Excellence • Special 10th & Inter Batches • Personal Mentorship
+      10+ Years of Academic Excellence &nbsp;·&nbsp; Expert Faculty &nbsp;·&nbsp; Personal Mentorship
     </p>
+    <div class="hero-cta reveal delay2">
+      <a href="#admission" class="btn-gold big">Apply for Admission</a>
+      <a href="#courses" class="btn-outline">View Courses</a>
+    </div>
+  </div>
 
-    <a href="#admission" class="btn-gold big reveal delay2">
-      Apply for Admission
-    </a>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="trust reveal">
-  <div class="trust-card">10+ Years Experience</div>
-  <div class="trust-card">Result-Oriented Teaching</div>
-  <div class="trust-card">Limited Batch Strength</div>
-</section>
-
-<!-- ABOUT -->
-<section class="section reveal">
-  <h2>Why Sri Sai Datta Tutorials?</h2>
-  <p>
-    A trusted tuition centre in Sriram Nagar, Kattedhan, focused on
-    strong fundamentals, discipline, and individual attention.
-  </p>
-</section>
-
-<!-- COURSES -->
-<section class="section dark reveal">
-  <h2>Courses Offered</h2>
-  <div class="grid">
-    <div class="glass">8th – 10th Classes</div>
-    <div class="glass">Intermediate & Gurukul</div>
-    <div class="glass">Maths • Science • Physics</div>
-    <div class="glass">Chemistry • Biology</div>
-    <div class="glass">Telugu • Hindi • English</div>
+<section class="marquee-band">
+  <div class="marquee-track">
+    <span>10+ Years Excellence</span>
+    <span class="dot">◆</span>
+    <span>Result-Oriented Teaching</span>
+    <span class="dot">◆</span>
+    <span>Limited Batch Strength</span>
+    <span class="dot">◆</span>
+    <span>Personal Attention</span>
+    <span class="dot">◆</span>
+    <span>10+ Years Excellence</span>
+    <span class="dot">◆</span>
+    <span>Result-Oriented Teaching</span>
+    <span class="dot">◆</span>
+    <span>Limited Batch Strength</span>
+    <span class="dot">◆</span>
+    <span>Personal Attention</span>
+    <span class="dot">◆</span>
   </div>
 </section>
 
-<!-- ADMISSION -->
-<section id="admission" class="section reveal">
-  <h2>Admission Enquiry</h2>
-  <form class="form" onsubmit="sendWhatsApp(event)">
-    <input id="student" placeholder="Student Name" required>
-    <input id="class" placeholder="Class (10th / Inter)" required>
-    <input id="parent" placeholder="Parent Name" required>
-    <input id="phone" placeholder="Mobile Number" required>
-    <button class="btn-gold">Submit Enquiry</button>
-  </form>
+<section id="about" class="section about reveal">
+  <div class="about-inner">
+    <div class="about-label">Our Philosophy</div>
+    <h2>Why Sri Sai Datta <em>Tutorials?</em></h2>
+    <p>
+      Nestled in Sriram Nagar, Kattedhan, we've spent over a decade building futures —
+      one student at a time. Our approach blends rigorous academics with compassionate
+      mentorship, ensuring every child walks out not just knowledgeable, but confident.
+    </p>
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-num" data-target="10">0</span><span>+</span>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="500">0</span><span>+</span>
+        <p>Students Mentored</p>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-target="95">0</span><span>%</span>
+        <p>Pass Rate</p>
+      </div>
+    </div>
+  </div>
+  <div class="about-visual">
+    <canvas id="globe"></canvas>
+  </div>
 </section>
 
-<footer>
-  <p>📍 Sriram Nagar, Kattedhan, Old Kurnool Road, Budwel</p>
-  <p>📞 6303423475</p>
+<section id="courses" class="section courses dark reveal">
+  <div class="section-label">What We Offer</div>
+  <h2>Courses <em>Offered</em></h2>
+  <div class="courses-grid">
+    <div class="course-card" data-index="1">
+      <div class="card-number">01</div>
+      <h3>8th – 10th Classes</h3>
+      <p>Comprehensive coverage of all subjects with board exam preparation and mock tests.</p>
+      <div class="card-tag">School</div>
+    </div>
+    <div class="course-card" data-index="2">
+      <div class="card-number">02</div>
+      <h3>Intermediate & Gurukul</h3>
+      <p>In-depth coaching for MPC and BiPC streams with competitive exam orientation.</p>
+      <div class="card-tag">College</div>
+    </div>
+    <div class="course-card" data-index="3">
+      <div class="card-number">03</div>
+      <h3>Mathematics & Science</h3>
+      <p>Physics, Chemistry, Biology — taught with conceptual clarity and problem-solving focus.</p>
+      <div class="card-tag">Core Subjects</div>
+    </div>
+    <div class="course-card" data-index="4">
+      <div class="card-number">04</div>
+      <h3>Languages</h3>
+      <p>Telugu, Hindi, and English — building communication and scoring potential.</p>
+      <div class="card-tag">Languages</div>
+    </div>
+  </div>
+</section>
+
+<section id="admission" class="section admission reveal">
+  <div class="admission-inner">
+    <div class="admission-info">
+      <div class="section-label">Get Started</div>
+      <h2>Begin Your <em>Journey</em></h2>
+      <p>Fill in the form and we'll get back to you via WhatsApp within 24 hours.</p>
+      <div class="contact-chips">
+        <div class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Sriram Nagar, Kattedhan, Budwel
+        </div>
+        <div class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          6303423475
+        </div>
+      </div>
+    </div>
+    <form class="form" onsubmit="sendWhatsApp(event)">
+      <div class="input-group">
+        <input id="student" placeholder=" " required>
+        <label>Student Name</label>
+      </div>
+      <div class="input-group">
+        <input id="classInput" placeholder=" " required>
+        <label>Class (10th / Inter)</label>
+      </div>
+      <div class="input-group">
+        <input id="parent" placeholder=" " required>
+        <label>Parent Name</label>
+      </div>
+      <div class="input-group">
+        <input id="phone" placeholder=" " required>
+        <label>Mobile Number</label>
+      </div>
+      <button class="btn-gold submit-btn" type="submit">
+        <span>Submit via WhatsApp</span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Sri Sai Datta Tutorials</h3>
+      <p>Where your child's success story begins.</p>
+    </div>
+    <div class="footer-line"></div>
+    <p class="footer-copy">© 2025 Sri Sai Datta Tutorials. All rights reserved.</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>
